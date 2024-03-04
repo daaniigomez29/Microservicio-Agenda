@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8097
 spring:
   application:
     name: agenda-service
@@ -7,5 +7,6 @@ spring:
     allow-bean-definition-overriding: true
   data:
     mongodb:
-      host: localhost
+      host: 182.28.0.16
+      database: agenda_service
       port: 27017

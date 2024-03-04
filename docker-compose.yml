@@ -1,0 +1,30 @@
+version: '2'
+networks:
+  mired2:
+    ipam:
+      config:
+        - subnet: 182.28.0.0/16
+          gateway: 182.28.0.1
+services:
+  db:
+    image: bitnami/mongodb:latest
+    container_name: mongo_DB
+    networks:
+      mired2:
+        ipv4_address: 182.28.0.10
+    ports:
+      - "27017:27017"
+    expose:
+      - 27017
+  app-tutorials:
+    image: danielgb29/agenda-microservice:1
+    container_name: agenda_service
+    networks:
+      mired2:
+        ipv4_address: 182.28.0.16
+    expose:
+      - 80
+    ports:
+      - "80:8097"
+    depends_on:
+      - db

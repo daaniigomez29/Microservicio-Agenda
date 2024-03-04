@@ -16,6 +16,7 @@ import java.time.LocalDate;
 public class Person {
     @Id
     private String id;
+
     private String firstName;
     private String lastName;
     private String street;
