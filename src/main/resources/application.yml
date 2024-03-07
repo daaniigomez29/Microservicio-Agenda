@@ -7,6 +7,6 @@ spring:
     allow-bean-definition-overriding: true
   data:
     mongodb:
-      host: 182.28.0.16
+      host: 192.28.0.13
       database: agenda_service
       port: 27017
