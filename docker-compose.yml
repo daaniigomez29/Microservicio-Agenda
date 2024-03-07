@@ -16,9 +16,9 @@ services:
       - "27017:27017"
     expose:
       - 27017
-  app-tutorials:
+  app-agenda:
     image: danielgb29/agenda-microservice:1
-    container_name: agenda_service
+    container_name: agenda-microservice
     networks:
       mired2:
         ipv4_address: 192.28.0.14
